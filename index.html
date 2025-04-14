@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yêu Em</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #ffc0cb;
+      font-family: 'Segoe UI', sans-serif;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 50px 20px 100px;
+      z-index: 1;
+      position: relative;
+    }
+
+    .gallery img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 105, 180, 0.6);
+      border: 4px solid white;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 40px;
+      color: white;
+      text-shadow: 2px 2px #ff69b4;
+      margin-top: 30px;
+      background-color: #ff4081;
+      display: inline-block;
+      padding: 10px 30px;
+      border-radius: 20px;
+    }
+
+    .title-box {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    /* Trái tim bay bay */
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      transform: rotate(-45deg);
+      animation: float 6s infinite ease-in-out;
+      opacity: 0.7;
+      z-index: 0;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart::after {
+      top: 0;
+      left: 10px;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0) rotate(-45deg);
+        opacity: 0.8;
+      }
+      100% {
+        transform: translateY(-300px) rotate(-45deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Trái tim bay khắp nơi -->
+  <div class="heart" style="top:90%; left:10%; animation-delay: 0s;"></div>
+  <div class="heart" style="top:95%; left:25%; animation-delay: 1s;"></div>
+  <div class="heart" style="top:100%; left:40%; animation-delay: 0.5s;"></div>
+  <div class="heart" style="top:90%; left:60%; animation-delay: 1.2s;"></div>
+  <div class="heart" style="top:95%; left:80%; animation-delay: 0.8s;"></div>
+  <div class="heart" style="top:98%; left:50%; animation-delay: 1.7s;"></div>
+  <div class="heart" style="top:99%; left:70%; animation-delay: 1.3s;"></div>
+
+  <!-- Tiêu đề -->
+  <div class="title-box">
+    <h1>Yêu em</h1>
+  </div>
+
+  <!-- Bộ sưu tập ảnh -->
+  <div class="gallery">
+    <img src="anh1.jpg" alt="Ảnh 1">
+    <img src="anh2.jpg" alt="Ảnh 2">
+    <img src="anh3.jpg" alt="Ảnh 3">
+    <img src="anh4.jpg" alt="Ảnh 4">
+    <img src="anh5.jpg" alt="Ảnh 5">
+    <img src="anh6.jpg" alt="Ảnh 6">
+    <img src="anh7.jpg" alt="Ảnh 7">
+    <img src="anh8.jpg" alt="Ảnh 8">
+    <img src="anh9.jpg" alt="Ảnh 9">
+    <img src="anh10.jpg" alt="Ảnh 10">
+  </div>
+
+</body>
+</html>
